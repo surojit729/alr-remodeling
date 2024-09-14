@@ -37,12 +37,13 @@
 		background: #fff;
 		overflow-y: auto;
 		transition: transform 0.5s cubic-bezier(0.07, 0.23, 0.34, 1);
-		padding: 10px 15px 20px;
+		padding: 10px 30px 20px;
 		z-index: 99;
 	}
 
 	.hdr_menu ul {
 		padding-top: 50px;
+		display: block;
 	}
 
 	.hdr_menu ul li {
@@ -64,8 +65,9 @@
 		-webkit-transition: initial !important;
 	}
 
-	.hdr_menu ul li.menu-item-has-children ul li {
-		padding: 5px 0;
+	.hdr_menu ul li.menu-item-has-children ul li,
+	.hdr_menu li.menu-item-has-children:hover>.sub-menu li {
+		padding: 10px 0;
 		line-height: 1.5;
 	}
 
@@ -78,10 +80,9 @@
 
 	.hdr_menu li a {
 		font-size: 15px;
-		font-weight: 400;
 		display: block;
 		color: #000000;
-		padding: 5px 0;
+		padding: 10px 0;
 	}
 
 	.hdr_menu li a:hover {
@@ -167,7 +168,7 @@
 
 	.mobile_menu_active .menu_trigger {
 		right: 20px;
-		top: 25px;
+		top: 55px;
 		transform: none;
 		position: fixed;
 	}
@@ -187,7 +188,7 @@
 	}
 
 	.mobile_menu_active .menu_btn span {
-		background: #688238;
+		background: #ed1b23;
 	}
 
 	.mobile_menu_active .menu_btn span:first-child {
@@ -234,7 +235,7 @@
 
 	.responisve-logo {
 		display: block;
-		width: 270px;
+		width: 170px;
 	}
 
 	.header-social-list-outer {
@@ -330,26 +331,70 @@
 		font-size: 50px;
 	}
 
-	.sticky .logo img {
-		-webkit-filter: brightness(0);
-		filter: brightness(0);
-	}
-
-
-	.headerLeftBtn {
-		margin-left: auto;
-		margin-right: 30px;
-	}
-
 	.hddr_inr {
 		margin-left: 0;
 	}
 
-	.nav_holder::before,
-	.nav_holder::after {
+	.nav_holder .hddr_inr::before,
+	.nav_holder .hddr_inr::after {
 		display: none;
 	}
 
+	.responsive-header-social-btn {
+		display: block;
+	}
+
+	.banner-content-outer h1 {
+		font-size: 60px;
+	}
+
+	.service-slider-outer .service-slide-card .data::before,
+	.service-slider-outer .service-slide-card .data::after,
+	.transformDesignWrapper::before,
+	.howWeWorkWrapper [class*="col-"]:not(:last-child)::after {
+		display: none;
+	}
+
+	.service-slide-card .data .dataHolder {
+		max-width: 100%;
+		margin-left: 0;
+	}
+
+	.transformDesignWrapper {
+		padding: 60px 0;
+	}
+
+	.transformDesignPic {
+		margin-bottom: 25px;
+	}
+
+	.testimonial-slider-outer {
+		padding-left: 0;
+		margin-top: 30px;
+	}
+
+	.section-heading h2 {
+		font-size: 50px;
+	}
+
+	.newContactFormOuter .formTop .formRow {
+		display: block;
+	}
+
+	.newContactFormOuter {
+		padding: 30px;
+	}
+
+	.newContactFormOuter .formTop .fieldTitle p {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.responsive-menu-additional-components .btn {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -378,6 +423,7 @@
 
 	.banner-content-outer p {
 		font-size: 20px;
+		margin-bottom: 25px;
 	}
 
 
@@ -385,6 +431,8 @@
 	.banner-content-outer .btn {
 		min-width: auto;
 		width: 100%;
+		font-size: 16px;
+		padding: 10px;
 	}
 
 	.btn,
@@ -463,4 +511,92 @@
 		width: 150px;
 	}
 
+	.top-header-outer {
+		display: none;
+	}
+
+	.bannerSliderOuter {
+		height: 650px;
+	}
+
+	.service-slider-outer {
+		margin: 0;
+		padding: 0 15px;
+	}
+
+	.service-slider-outer .service-slide-card:hover .data {
+		transform: none;
+	}
+
+	.service-slider-outer .service-slide-card .data {
+		border-radius: 0;
+		padding: 15px;
+		margin: 0;
+		transform: none;
+		opacity: 0;
+	}
+
+	.service-slider-outer .service-slide-card .data h3 {
+		font-size: 27px;
+	}
+
+	.service-slider-outer .service-slide-card figure {
+		height: 250px;
+		min-height: 250px;
+	}
+
+	.weHandleWrapperBox h3 {
+		font-size: 22px;
+	}
+
+	.transformDesignWrapper .section-heading h2 {
+		font-size: 28px;
+	}
+
+	.transformDesignWrapper .section-heading p {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	.transformDesignWrapper .btnGroup {
+		display: block;
+	}
+
+	.transformDesignWrapper .btnGroup::before {
+		display: none;
+	}
+
+	.transformDesignWrapper .btnGroup .clUsBtn {
+		font-size: 17px;
+		display: block;
+		margin-top: 30px;
+		padding-left: 55px;
+	}
+
+	.transformDesignWrapper .btnGroup .clUsBtn::before {
+		width: 45px;
+		height: 45px;
+		font-size: 23px;
+	}
+
+	.testimonialWrapper .section-heading {
+		margin-bottom: 30px;
+	}
+
+	.getInTouchWrapper .bg-image-section {
+		min-height: 200px;
+	}
+
+	.newContactFormOuter {
+		padding: 30px 0;
+		margin: 0;
+	}
+
+	.footer-top-row>[class*="col-"] {
+		padding: 35px 15px 0;
+	}
+
+	.footer-bottom-row {
+		margin-top: 50px;
+	}
 }

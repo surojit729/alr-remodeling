@@ -23,7 +23,7 @@ jQuery(document).ready(function () {
     });
 
     // Sub_menu
-    jQuery(".hdr_menu ul li.menu-item-has-children > a").after("<div class='sub_menu_opener'><i class='fas fa-chevron-down'></i></div>");
+    jQuery(".hdr_menu ul li.menu-item-has-children > a").after("<div class='sub_menu_opener'><i class='las la-angle-down'></i></div>");
     jQuery(".sub_menu_opener").click(function () {
         jQuery('.hdr_menu .sub-menu').slideUp();
         jQuery("body").removeClass("sub_menu_active");

@@ -733,7 +733,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .sticky .hdr_menu li a::before {
-	background-color: var(--heading-color);
+	background-color: var(--primary-color);
 }
 
 .sticky .header-right-content .menu-toggle-btn {
@@ -744,7 +744,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .hdr_menu li a::before {
 	content: "";
 	position: absolute;
-	background-color: var(--color-white);
+	background-color: var(--primary-color);
 	width: 0;
 	height: 2px;
 	transition: all 0.4s ease-in-out;
@@ -757,7 +757,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .hdr_menu li:hover a {
-	color: var(--color-white);
+	color: var(--primary-color);
 }
 
 .hdr_menu li:hover a::before {
@@ -767,7 +767,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .hdr_menu li.current-menu-item a {
-	color: var(--color-white);
+	color: var(--primary-color);
 }
 
 .hdr_menu li.current-menu-item a::before {
@@ -916,7 +916,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	top: 0;
 	right: 0;
 	font-size: 22px;
-	color: #196ba3;
+	color: #ed1b23;
 	cursor: pointer;
 	transition: all 0.4s ease-in-out;
 }
@@ -2868,4 +2868,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .footerLicenseText p {
 	text-align: center;
 	color: #474747;
+}
+
+.bannerSlidePic {
+	height: 100%;
 }
