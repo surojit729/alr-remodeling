@@ -3149,6 +3149,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	height: 450px;
 	min-height: 450px;
 	position: relative;
+	width: 50%;
 }
 
 .serviceProjectCard .media figure::before {
@@ -3221,7 +3222,8 @@ input[type="number"]::-webkit-outer-spin-button {
 	position: relative;
 }
 
-.aboutWelcomeWrapper::before {
+.aboutWelcomeWrapper::before,
+.videoTestimonialBg::before {
 	content: "";
 	position: absolute;
 	top: 30px;
@@ -3246,4 +3248,47 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .ourStoryWrapper .section-heading h2 {
 	font-size: 50px;
+}
+
+.videoTestimonialBg {
+	background-color: #202020;
+	position: relative;
+	min-height: 580px;
+	padding-top: 80px;
+}
+
+.videoTestimonialBg .section-heading * {
+	color: var(--color-white);
+}
+
+.videoTestimonialBg .reviewPlatform a {
+	border-color: rgba(220, 220, 220, 0.15);
+}
+
+.videoTestimonialOuter {
+	margin-top: -250px;
+	position: relative;
+}
+
+.loadMoreBtn {
+	margin-top: 50px;
+}
+
+.loadMoreBtn .btn {
+	min-width: 210px;
+	text-align: center;
+	min-height: 59px;
+	align-items: center;
+	border-radius: 13px;
+	font-size: 17px;
+}
+
+.contentTestimonialWrapper .section-heading {
+	margin-bottom: 50px;
+}
+
+.contentTestimonialWrapper .testimonialReviewCard {
+	background-color: #F8F8F8;
+	padding: 40px;
+	border-radius: 20px;
 }

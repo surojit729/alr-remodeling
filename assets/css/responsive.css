@@ -395,6 +395,57 @@
 		width: 100%;
 		margin-bottom: 20px;
 	}
+
+	.aboutWelcomeWrapper::before,
+	.videoTestimonialBg::before,
+	.workTranformationWrapper::before,
+	.our-work-process-wrapper::before {
+		display: none;
+	}
+
+	.aboutWelcomeWrapper {
+		padding: 60px 0;
+	}
+
+	.aboutWelcomeMedia,
+	.workTranformationMedia,
+	.workSatisfactionMedia {
+		margin-bottom: 30px;
+	}
+
+	.aboutWelcomeMedia img,
+	.ourStoryMedia img,
+	.workTranformationMedia img,
+	.workSatisfactionMedia img {
+		width: 100%;
+	}
+
+	.ourStoryWrapper .section-heading,
+	.workTranformationWrapper .section-heading,
+	.workSatisfactionWrapper .section-heading {
+		max-width: 100%;
+	}
+
+	.workTranformationMedia,
+	.workSatisfactionMedia {
+		position: static;
+		width: 100%;
+		padding: 15px;
+	}
+
+	.tabMain {
+		display: none;
+	}
+
+	.our-work-process-wrapper .tabCumAccordian>div {
+		padding: 0 15px;
+		width: 100%;
+	}
+
+	.our-work-process-wrapper .tabCumAccordian .tabNav ul {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 @media (max-width: 767px) {
@@ -421,7 +472,8 @@
 		margin-bottom: 15px;
 	}
 
-	.banner-content-outer p {
+	.banner-content-outer p,
+	.serviceBannerWrapper .banner-content-outer p {
 		font-size: 20px;
 		margin-bottom: 25px;
 	}
@@ -456,9 +508,6 @@
 		text-align: center;
 	}
 
-	.innerBannerWrapper {
-		padding: 110px 0 60px;
-	}
 
 	.innerBannerData h1 {
 		font-size: 32px;
@@ -598,5 +647,78 @@
 
 	.footer-bottom-row {
 		margin-top: 50px;
+	}
+
+	.innerBannerMedia {
+		height: 300px;
+		min-height: 300px;
+	}
+
+	.videoTestimonialBg {
+		min-height: auto;
+		padding: 60px 0 100px;
+	}
+
+	.videoTestimonialOuter {
+		margin-top: -40px;
+	}
+
+	.contentTestimonialWrapper .testimonialReviewCard {
+		padding: 20px;
+		border-radius: 10px;
+	}
+
+	.reviewPlatform {
+		margin: 45px 0 0;
+	}
+
+	.ourStoryWrapper .section-heading h2 {
+		font-size: 28px;
+	}
+
+	.serviceBannerMedia {
+		height: 600px;
+		min-height: 600px;
+	}
+
+	.workSatisfactionWrapper {
+		padding: 50px 0;
+	}
+
+	.workSatisfactionWrapper .section-heading h3 {
+		font-size: 24px;
+	}
+
+	.serviceGalleryCard {
+		min-height: 400px;
+		height: 400px;
+	}
+
+	.serviceProjectCard .media figure {
+		height: 250px;
+		min-height: 250px;
+	}
+
+	.serviceProjectCard .data h3 {
+		font-size: 20px;
+	}
+
+	.our-work-process-wrapper .tabCumAccordian .tabNav ul li::before {
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+	}
+
+	.our-work-process-wrapper .tabCumAccordian .tabNav ul li::after {
+		left: 21px;
+	}
+
+	.our-work-process-wrapper .tabCumAccordian .tabNav ul li {
+		margin-bottom: 20px;
+		padding-left: 60px;
+	}
+
+	.our-work-process-wrapper .tabCumAccordian .tabNav .title-outer h3 {
+		font-size: 20px;
 	}
 }

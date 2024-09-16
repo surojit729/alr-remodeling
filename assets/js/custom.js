@@ -221,7 +221,7 @@ jQuery(document).ready(function () {
     new Swiper('.serviceGallerySliderOuter .swiper', {
         slidesPerView: 1,
         loop: false,
-        spaceBetween: 0,
+        spaceBetween: 20,
         speed: 1000,
         autoplay: {
             delay: 4000,
