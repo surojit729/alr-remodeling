@@ -217,6 +217,62 @@ jQuery(document).ready(function () {
             clickable: true,
         },
     });
+    // Testimonial Slider
+    new Swiper('.serviceGallerySliderOuter .swiper', {
+        slidesPerView: 1,
+        loop: false,
+        spaceBetween: 0,
+        speed: 1000,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        pagination: {
+            el: ".serviceGallerySliderOuter .swiper-pagination",
+            clickable: true,
+        },
+    });
 
+
+    // tabCumAccordian
+    jQuery('.tabPan').prepend('<span class="tabTitleHead"></span>');
+    jQuery('.tabNav li').each(function () {
+        var index = jQuery(this).index();
+        var tdt = jQuery(this).text();
+        jQuery(this).closest('.tabCumAccordian').find('.tabPan').eq(index).children('.tabTitleHead').text(tdt);
+    });
+    jQuery('.tabNav li:first-child, .tabPan:first-child .tabTitleHead').addClass('active');
+    jQuery('.tabPan .tabInner').hide();
+    jQuery('.tabPan:first-child .tabInner').show();
+    jQuery('.tabNav li').click(function () {
+        var index = jQuery(this).index();
+        jQuery(this).siblings().removeClass('active');
+        jQuery(this).addClass('active');
+        jQuery(this).closest('.tabNav').next('.tabMain').find('.tabPan .tabInner').hide();
+        jQuery(this).closest('.tabNav').next('.tabMain').find('.tabPan .tabTitleHead').removeClass('active');
+        jQuery(this).closest('.tabNav').next('.tabMain').find('.tabPan').eq(index).children('.tabInner').show();
+        jQuery(this).closest('.tabNav').next('.tabMain').find('.tabPan').eq(index).find('.tabTitleHead').addClass('active');
+        return false;
+    });
+    jQuery('.tabTitleHead').click(function () {
+        var index = jQuery(this).parent('.tabPan').index();
+        jQuery(this).parent('.tabPan').siblings('.tabPan').children('.tabInner').slideUp(200)
+        jQuery(this).next('.tabInner').slideToggle(200);
+        jQuery(this).closest('.tabMain').prev('.tabNav').find('li').removeClass('active');
+        jQuery(this).closest('.tabMain').prev('.tabNav').find('li').eq(index).toggleClass('active');
+        jQuery(this).parent('.tabPan').siblings().find('.tabTitleHead').removeClass('active');
+        jQuery(this).toggleClass('active');
+    });
+    jQuery(".tabImage").hide();
+    jQuery(".tabImage:first-child").show();
+    var tabImg = jQuery('.tabWithImage');
+    if (tabImg.length) {
+        jQuery('.tabLink').click(function () {
+            var index = jQuery(this).index();
+            jQuery(this).closest('.tabWithImage').find(".tabImage").eq(index).show();
+            jQuery(this).closest('.tabWithImage').find(".tabImage").eq(index).siblings().hide();
+        });
+    }
 
 });
