@@ -329,6 +329,28 @@ jQuery(document).ready(function () {
         .hide()
     })
   }
+
+  var wpcf7Elm = document.querySelector(".getInTouchWrapper .wpcf7")
+
+  wpcf7Elm.addEventListener(
+    "wpcf7submit",
+    function (event) {
+      jQuery(
+        "<span class='wpcf7-not-valid-tip' aria-hidden='true'>Please fill out this field.</span>"
+      ).insertAfter(".formSelectionFieldOuter")
+    },
+    false
+  )
+
+  // Replace '#your-checkbox' with the selector for your checkbox
+  jQuery(".formSelectionField  input").on("change", function () {
+    // Replace '.your-target-element' with the selector for the element you want to add the class to
+    if (jQuery(this).is(":checked")) {
+      jQuery(this).parents(".formRow").addClass("isValid")
+    } else {
+      jQuery(this).parents(".formRow").removeClass("isValid")
+    }
+  })
   //filter
   jQuery(".filters ul li").click(function () {
     jQuery(".filters ul li").removeClass("activefilter")
