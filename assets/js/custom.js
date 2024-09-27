@@ -329,6 +329,24 @@ jQuery(document).ready(function () {
         .hide()
     })
   }
+  //filter
+  jQuery(".filters ul li").click(function () {
+    jQuery(".filters ul li").removeClass("activefilter")
+    jQuery(this).addClass("activefilter")
+
+    var data = jQuery(this).attr("data-filter")
+    $grid.isotope({
+      filter: data,
+    })
+  })
+
+  var $grid = jQuery(".grid").isotope({
+    itemSelector: ".all",
+    percentPosition: true,
+    masonry: {
+      columnWidth: ".all",
+    },
+  })
 
   var wpcf7Elm = document.querySelector(".getInTouchWrapper .wpcf7")
 
@@ -350,23 +368,5 @@ jQuery(document).ready(function () {
     } else {
       jQuery(this).parents(".formRow").removeClass("isValid")
     }
-  })
-  //filter
-  jQuery(".filters ul li").click(function () {
-    jQuery(".filters ul li").removeClass("activefilter")
-    jQuery(this).addClass("activefilter")
-
-    var data = jQuery(this).attr("data-filter")
-    $grid.isotope({
-      filter: data,
-    })
-  })
-
-  var $grid = jQuery(".grid").isotope({
-    itemSelector: ".all",
-    percentPosition: true,
-    masonry: {
-      columnWidth: ".all",
-    },
   })
 })
